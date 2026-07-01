@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andalousia — Artisanat d'Andalousie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg class="defs">
+  <defs>
+    <clipPath id="horseshoeArch" clipPathUnits="objectBoundingBox">
+      <path d="M0,1 L0,0.46 C0,0.16 0.16,-0.06 0.5,-0.06 C0.84,-0.06 1,0.16 1,0.46 L1,1 Z" />
+    </clipPath>
+  </defs>
+</svg>
+
+<header>
+  <div class="logo">
+    <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M2 22V11c0-4 2.5-8.5 10-8.5S22 7 22 11v11" stroke="#D9A441" stroke-width="2"/></svg>
+    Andalousia
+  </div>
+  <nav class="links">
+    <a href="#categories">Collections</a>
+    <a href="#products">Boutique</a>
+    <a href="#story">Notre histoire</a>
+    <a href="#newsletter">Contact</a>
+  </nav>
+  <div class="header-right">
+    <button id="cart-toggle" class="relative flex items-center gap-2 group" aria-label="Ouvrir le panier">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="transition-transform group-hover:scale-105">
+    <path d="M3 6h2l1.2 11.4A2 2 0 0 0 8.2 19h8.6a2 2 0 0 0 2-1.8L20 8H6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9" cy="21" r="1.3" fill="currentColor"/>
+          <circle cx="17" cy="21" r="1.3" fill="currentColor"/>
+        </svg>
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-copper text-cream text-[10px] font-bold rounded-full w-4.5 h-4.5 min-w-[18px] h-[18px] flex items-center justify-center">0</span>
+        </button>
+
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-eyebrow">Artisanat d'Andalousie · Fait main</div>
+  <h1>Andalousia</h1>
+  <p class="tagline">Céramiques de Fès, cuirs tannés à la main et zelliges peints à l'ancienne — l'âme du Sud ramenée dans votre intérieur.</p>
+  <svg class="hero-arch-divider" viewBox="0 0 120 60"><path d="M2,58 L2,26 C2,9 20,-2 60,-2 C100,-2 118,9 118,26 L118,58" stroke="#D9A441" stroke-width="1.5" fill="none" opacity="0.7"/></svg>
+  <div class="cta-row">
+    <a href="#products" class="btn btn-primary">Explorer la collection</a>
+    <a href="#story" class="btn btn-ghost">Notre histoire</a>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="section-head">
+    <div class="section-eyebrow">Nos univers</div>
+    <h2 class="section-title">Quatre savoir-faire, un même héritage</h2>
+  </div>
+  <div class="categories">
+    <div class="category-card">
+      <div class="icon-arch"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#EDE3D0" stroke-width="1.5"/><path d="M12 4v16M4 12h16" stroke="#EDE3D0" stroke-width="1.5"/></svg></div>
+      <h3>Céramique &amp; Zellige</h3>
+      <p>Émaillées et peintes à la main à Fès</p>
+    </div>
+    <div class="category-card">
+      <div class="icon-arch"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="1" stroke="#EDE3D0" stroke-width="1.5"/><path d="M4 10h16" stroke="#EDE3D0" stroke-width="1.5"/></svg></div>
+      <h3>Textiles &amp; Tapis</h3>
+      <p>Laine berbère tissée main</p>
+    </div>
+    <div class="category-card">
+      <div class="icon-arch"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8l8-4 8 4v8l-8 4-8-4z" stroke="#EDE3D0" stroke-width="1.5"/></svg></div>
+      <h3>Maroquinerie</h3>
+      <p>Cuir tanné végétal, façon Marrakech</p>
+    </div>
+    <div class="category-card">
+      <div class="icon-arch"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M6 8l12 0M8 8v10a4 4 0 008 0V8" stroke="#EDE3D0" stroke-width="1.5"/></svg></div>
+      <h3>Luminaires</h3>
+      <p>Lanternes ajourées, laiton martelé</p>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="zellige-bg">
+  <div class="section-head">
+    <div class="section-eyebrow">Boutique</div>
+    <h2 class="section-title">La collection</h2>
+    <p class="section-sub">Chaque pièce est réalisée par un artisan partenaire, en petite série.</p>
+  </div>
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<section id="story">
+  <div class="story">
+    <div class="story-text">
+      <div class="section-eyebrow">Notre histoire</div>
+      <h2>Là où les deux rives se rencontrent</h2>
+      <p>Adalousia est née d'un carnet de voyage : les patios de Séville, les souks de Fès, les ateliers de Marrakech. Nous travaillons directement avec une trentaine de familles d'artisans, sans intermédiaire.</p>
+      <p>Chaque objet porte une signature, une petite irrégularité — la preuve qu'une main, et non une machine, l'a façonné.</p>
+      <a href="#newsletter" class="btn btn-ghost" style="border-color:rgba(22,38,42,0.3); color:var(--ink); display:inline-block; margin-top:10px;">En savoir plus</a>
+    </div>
+    <div class="story-visual">
+      <div class="story-arch"></div>
+    </div>
+  </div>
+</section>
+
+<section id="newsletter">
+  <div class="section-head" style="margin-bottom:0;">
+    <div class="section-eyebrow">Restons en contact</div>
+    <h2 class="section-title">Recevez nos nouvelles pièces en avant-première</h2>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Votre adresse email" aria-label="Adresse email">
+      <button class="btn btn-primary" onclick="alert('Merci, votre inscription est enregistrée.')">S'inscrire</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:14px;">Adalousia</div>
+      <p style="font-size:0.85rem; opacity:0.75; max-width:280px;">Artisanat d'Andalousie et du Maghreb, sélectionné avec soin, livré depuis notre atelier.</p>
+    </div>
+    <div>
+      <h4>Boutique</h4>
+      <a href="#products">Céramique</a>
+      <a href="#products">Textiles</a>
+      <a href="#products">Maroquinerie</a>
+    </div>
+    <div>
+      <h4>Maison</h4>
+      <a href="#story">Notre histoire</a>
+      <a href="#">Nos artisans</a>
+      <a href="#">Livraison</a>
+    </div>
+    <div>
+      <h4>Aide</h4>
+      <a href="#">Contact</a>
+      <a href="#">Retours</a>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Adalousia. Tous droits réservés.</span>
+    <span>Casablanca · Fès · Séville</span>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Votre panier</h3>
+    <button class="cart-close" onclick="closeCart()">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-Count" id="cartCount"></div>
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">0 €</span></div>
+    <button class="btn btn-primary" onclick="alert('Commande simulée — intégrez un vrai paiement (Stripe, etc.) pour aller en production.')">Passer commande</button>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,168 +1,317 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andalousia — Artisanat d'Andalousie</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andalousia — Artisanat &amp; terroir marocain</title>
+  <meta name="description" content="Andalousia : boutique d'artisanat et de terroir marocain — argan, safran, tapis berbères, poterie, caftans et bijoux, choisis auprès d'artisans partenaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Karla:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<svg class="defs">
-  <defs>
-    <clipPath id="horseshoeArch" clipPathUnits="objectBoundingBox">
-      <path d="M0,1 L0,0.46 C0,0.16 0.16,-0.06 0.5,-0.06 C0.84,-0.06 1,0.16 1,0.46 L1,1 Z" />
-    </clipPath>
-  </defs>
-</svg>
+  <!-- Définitions SVG partagées (arche mauresque utilisée en clip-path un peu partout) -->
+  <svg class="defs">
+    <defs>
+      <clipPath id="horseshoeArch" clipPathUnits="objectBoundingBox">
+        <path d="M0,1 L0,0.46 C0,0.16 0.2,0 0.5,0 C0.8,0 1,0.16 1,0.46 L1,1 Z" />
+      </clipPath>
+    </defs>
+  </svg>
 
-<header>
-  <div class="logo">
-    <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M2 22V11c0-4 2.5-8.5 10-8.5S22 7 22 11v11" stroke="#D9A441" stroke-width="2"/></svg>
-    Andalousia
-  </div>
-  <nav class="links">
-    <a href="#categories">Collections</a>
-    <a href="#products">Boutique</a>
-    <a href="#story">Notre histoire</a>
-    <a href="#newsletter">Contact</a>
-  </nav>
-  <div class="header-right">
-    <button id="cart-toggle" class="relative flex items-center gap-2 group" aria-label="Ouvrir le panier">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="transition-transform group-hover:scale-105">
-    <path d="M3 6h2l1.2 11.4A2 2 0 0 0 8.2 19h8.6a2 2 0 0 0 2-1.8L20 8H6" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="9" cy="21" r="1.3" fill="currentColor"/>
-          <circle cx="17" cy="21" r="1.3" fill="currentColor"/>
-        </svg>
-        <span id="cart-count" class="absolute -top-2 -right-2 bg-copper text-cream text-[10px] font-bold rounded-full w-4.5 h-4.5 min-w-[18px] h-[18px] flex items-center justify-center">0</span>
-        </button>
+  <header>
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g transform="translate(20,20)" stroke="currentColor" stroke-width="1.1">
+          <circle r="16" />
+          <circle r="2" />
+          <g id="hLogoPetal">
+            <path d="M0,-14 C1.8,-9.5 1.8,-4.5 0,-2 C-1.8,-4.5 -1.8,-9.5 0,-14 Z" fill="none" />
+          </g>
+          <use href="#hLogoPetal" transform="rotate(30)" />
+          <use href="#hLogoPetal" transform="rotate(60)" />
+          <use href="#hLogoPetal" transform="rotate(90)" />
+          <use href="#hLogoPetal" transform="rotate(120)" />
+          <use href="#hLogoPetal" transform="rotate(150)" />
+          <use href="#hLogoPetal" transform="rotate(180)" />
+          <use href="#hLogoPetal" transform="rotate(210)" />
+          <use href="#hLogoPetal" transform="rotate(240)" />
+          <use href="#hLogoPetal" transform="rotate(270)" />
+          <use href="#hLogoPetal" transform="rotate(300)" />
+          <use href="#hLogoPetal" transform="rotate(330)" />
+        </g>
+      </svg>
+      <span class="logo-text">Andalousia</span>
+    </div>
 
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-eyebrow">Artisanat d'Andalousie · Fait main</div>
-  <h1>Andalousia</h1>
-  <p class="tagline">Céramiques de Fès, cuirs tannés à la main et zelliges peints à l'ancienne — l'âme du Sud ramenée dans votre intérieur.</p>
-  <svg class="hero-arch-divider" viewBox="0 0 120 60"><path d="M2,58 L2,26 C2,9 20,-2 60,-2 C100,-2 118,9 118,26 L118,58" stroke="#D9A441" stroke-width="1.5" fill="none" opacity="0.7"/></svg>
-  <div class="cta-row">
-    <a href="#products" class="btn btn-primary">Explorer la collection</a>
-    <a href="#story" class="btn btn-ghost">Notre histoire</a>
-  </div>
-</section>
-
-<section id="categories">
-  <div class="section-head">
-    <div class="section-eyebrow">Nos univers</div>
-    <h2 class="section-title">Quatre savoir-faire, un même héritage</h2>
-  </div>
-  <div class="categories">
-    <div class="category-card">
-      <div class="icon-arch"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#EDE3D0" stroke-width="1.5"/><path d="M12 4v16M4 12h16" stroke="#EDE3D0" stroke-width="1.5"/></svg></div>
-      <h3>Céramique &amp; Zellige</h3>
-      <p>Émaillées et peintes à la main à Fès</p>
-    </div>
-    <div class="category-card">
-      <div class="icon-arch"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="1" stroke="#EDE3D0" stroke-width="1.5"/><path d="M4 10h16" stroke="#EDE3D0" stroke-width="1.5"/></svg></div>
-      <h3>Textiles &amp; Tapis</h3>
-      <p>Laine berbère tissée main</p>
-    </div>
-    <div class="category-card">
-      <div class="icon-arch"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8l8-4 8 4v8l-8 4-8-4z" stroke="#EDE3D0" stroke-width="1.5"/></svg></div>
-      <h3>Maroquinerie</h3>
-      <p>Cuir tanné végétal, façon Marrakech</p>
-    </div>
-    <div class="category-card">
-      <div class="icon-arch"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M6 8l12 0M8 8v10a4 4 0 008 0V8" stroke="#EDE3D0" stroke-width="1.5"/></svg></div>
-      <h3>Luminaires</h3>
-      <p>Lanternes ajourées, laiton martelé</p>
-    </div>
-  </div>
-</section>
-
-<section id="products" class="zellige-bg">
-  <div class="section-head">
-    <div class="section-eyebrow">Boutique</div>
-    <h2 class="section-title">La collection</h2>
-    <p class="section-sub">Chaque pièce est réalisée par un artisan partenaire, en petite série.</p>
-  </div>
-  <div class="products-grid" id="productsGrid"></div>
-</section>
-
-<section id="story">
-  <div class="story">
-    <div class="story-text">
-      <div class="section-eyebrow">Notre histoire</div>
-      <h2>Là où les deux rives se rencontrent</h2>
-      <p>Adalousia est née d'un carnet de voyage : les patios de Séville, les souks de Fès, les ateliers de Marrakech. Nous travaillons directement avec une trentaine de familles d'artisans, sans intermédiaire.</p>
-      <p>Chaque objet porte une signature, une petite irrégularité — la preuve qu'une main, et non une machine, l'a façonné.</p>
-      <a href="#newsletter" class="btn btn-ghost" style="border-color:rgba(22,38,42,0.3); color:var(--ink); display:inline-block; margin-top:10px;">En savoir plus</a>
-    </div>
-    <div class="story-visual">
-      <div class="story-arch"></div>
-    </div>
-  </div>
-</section>
-
-<section id="newsletter">
-  <div class="section-head" style="margin-bottom:0;">
-    <div class="section-eyebrow">Restons en contact</div>
-    <h2 class="section-title">Recevez nos nouvelles pièces en avant-première</h2>
-    <div class="newsletter-form">
-      <input type="email" placeholder="Votre adresse email" aria-label="Adresse email">
-      <button class="btn btn-primary" onclick="alert('Merci, votre inscription est enregistrée.')">S'inscrire</button>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-grid">
-    <div>
-      <div class="logo" style="margin-bottom:14px;">Adalousia</div>
-      <p style="font-size:0.85rem; opacity:0.75; max-width:280px;">Artisanat d'Andalousie et du Maghreb, sélectionné avec soin, livré depuis notre atelier.</p>
-    </div>
-    <div>
-      <h4>Boutique</h4>
-      <a href="#products">Céramique</a>
-      <a href="#products">Textiles</a>
-      <a href="#products">Maroquinerie</a>
-    </div>
-    <div>
-      <h4>Maison</h4>
+    <nav class="links">
+      <a href="#categories">Categories</a>
+      <a href="#products">Boutique</a>
       <a href="#story">Notre histoire</a>
-      <a href="#">Nos artisans</a>
-      <a href="#">Livraison</a>
-    </div>
-    <div>
-      <h4>Aide</h4>
-      <a href="#">Contact</a>
-      <a href="#">Retours</a>
-      <a href="#">FAQ</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Adalousia. Tous droits réservés.</span>
-    <span>Casablanca · Fès · Séville</span>
-  </div>
-</footer>
+      <a href="#newsletter">Contact</a>
+    </nav>
 
-<div class="overlay" id="overlay" onclick="closeCart()"></div>
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cart-header">
-    <h3>Votre panier</h3>
-    <button class="cart-close" onclick="closeCart()">&times;</button>
-  </div>
-  <div class="cart-items" id="cartItems"></div>
-  <div class="cart-footer">
-    <div class="cart-Count" id="cartCount"></div>
-    <div class="cart-total-row"><span>Total</span><span id="cartTotal">0 €</span></div>
-    <button class="btn btn-primary" onclick="alert('Commande simulée — intégrez un vrai paiement (Stripe, etc.) pour aller en production.')">Passer commande</button>
-  </div>
+    <div class="header-right">
+      <div class="search-wrap">
+        <button class="icon-btn" id="searchToggleBtn" aria-label="Rechercher">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M21 21l-4.3-4.3" />
+          </svg>
+        </button>
+        <div class="search-bar" id="searchBar">
+          <input id="searchInput" type="text" placeholder="Rechercher une pièce…" aria-label="Rechercher un produit">
+        </div>
+      </div>
+
+      <button class="icon-btn" id="wishlistBtn" aria-label="Favoris">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+        <span class="badge-count hidden" id="wishlistBadge">0</span>
+      </button>
+
+      <button class="icon-btn" id="cartBtn" aria-label="Panier">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M3 6h2l1.2 11.4A2 2 0 0 0 8.2 19h8.6a2 2 0 0 0 2-1.8L20 8H6" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <circle cx="9" cy="21" r="1.3" fill="currentColor" />
+          <circle cx="17" cy="21" r="1.3" fill="currentColor" />
+        </svg>
+        <span class="badge-count hidden" id="cartBadge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <svg class="hero-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g transform="translate(50,50)" stroke="#D9A441" stroke-width="1">
+        <circle r="34" />
+        <circle r="4" />
+        <g id="heroPetal">
+          <path d="M0,-30 C4,-20 4,-9 0,-4 C-4,-9 -4,-20 0,-30 Z" fill="none" />
+        </g>
+        <use href="#heroPetal" transform="rotate(30)" />
+        <use href="#heroPetal" transform="rotate(60)" />
+        <use href="#heroPetal" transform="rotate(90)" />
+        <use href="#heroPetal" transform="rotate(120)" />
+        <use href="#heroPetal" transform="rotate(150)" />
+        <use href="#heroPetal" transform="rotate(180)" />
+        <use href="#heroPetal" transform="rotate(210)" />
+        <use href="#heroPetal" transform="rotate(240)" />
+        <use href="#heroPetal" transform="rotate(270)" />
+        <use href="#heroPetal" transform="rotate(300)" />
+        <use href="#heroPetal" transform="rotate(330)" />
+      </g>
+    </svg>
+    <div class="hero-eyebrow">Artisanat · Fait main</div>
+    <h1>Andalousia</h1> <p class="tagline">L'héritage andalou, façonné par les artisans du Maroc.</p>
+    <img class="porte" src="./src/acf2be94928254878f5ae1183f890f12.jpg">
+    <div class="cta-row">
+      <a href="#products" class="btn btn-primary">Explorer la collection</a>
+      <a href="#story" class="btn btn-ghost">Notre histoire</a>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="section-head">
+      <div class="section-eyebrow">Nos univers</div>
+      <h2 class="section-title">Quatre savoir-faire, un même terroir</h2>
+    </div>
+    <div class="categories">
+  <button class="category-card" data-slugs="argan,amlou,safran,miel,dattes,epices,the">
+    <div class="category-image">
+      <img src="image/epices.jpg" alt="Terroir & Épicerie fine">
+    </div>
+    <h3>Terroir &amp; Épicerie fine</h3>
+    <p>Argan, safran, miel et épices du souk</p>
+  </button>
+
+  <button class="category-card" data-slugs="poterie,ceramique,tapis,lanternes">
+    <div class="category-image">
+      <img src="image/ceramique.jpg" alt="Artisanat & Décoration">
+    </div>
+    <h3>Artisanat Décoration</h3>
+    <p>Poterie, céramique, tapis et lanternes</p>
+  </button>
+
+  <button class="category-card" data-slugs="sacs,babouches,caftans,djellabas">
+    <div class="category-image">
+      <img src="image/mode.jpg" alt="Mode & Maroquinerie">
+    </div>
+    <h3>Mode Maroquinerie</h3>
+    <p>Cuir tanné, babouches, bijous, sac tradition</p>
+  </button>
+
+  <button class="category-card" data-slugs="bijoux,cosmetiques">
+    <div class="category-image">
+      <img src="image/terroir.jpg" alt="Bijoux & Cosmétiques">
+    </div>
+    <h3>Bijoux &amp; Cosmétiques</h3>
+    <p>Argent berbère et rituels du hammam</p>
+  </button>
 </div>
+  </section>
 
-<script src="./script.js"></script>
+  <section id="toolbar">
+    <div class="toolbar-pills" id="categoryPills"></div>
+    <div class="toolbar-row">
+      <select id="filterCategory" class="toolbar-select"></select>
+      <div class="price-range">
+        <input id="filterPriceMin" type="number" min="0" placeholder="Prix min" class="toolbar-input">
+        <span>—</span>
+        <input id="filterPriceMax" type="number" min="0" placeholder="Prix max" class="toolbar-input">
+      </div>
+      <select id="filterSort" class="toolbar-select toolbar-sort">
+        <option value="populaire">Popularité</option>
+        <option value="prix-asc">Prix croissant</option>
+        <option value="prix-desc">Prix décroissant</option>
+        <option value="nouveautes">Nouveautés</option>
+      </select>
+      <span class="results-count" id="resultsCount"></span>
+    </div>
+  </section>
+
+  <section id="products" class="zellige-bg">
+    <div class="section-head">
+      <div class="section-eyebrow">Boutique</div>
+      <h2 class="section-title">La collection</h2>
+      <p class="section-sub">Chaque pièce est réalisée par un artisan partenaire, en petite série.</p>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="pagination" id="pagination"></div>
+  </section>
+
+  <section id="story">
+    <div class="story">
+      <div class="story-text">
+        <div class="section-eyebrow">Notre histoire</div>
+        <h2>Là où les deux rives se rencontrent</h2>
+        <p>Andalousia est née d'un carnet de voyage : les patios de Séville, les souks de Fès, les ateliers de
+          Marrakech. Nous travaillons directement avec une trentaine de familles d'artisans, sans intermédiaire.</p>
+        <p>Chaque objet porte une signature, une petite irrégularité — la preuve qu'une main, et non une machine,
+          l'a façonné.</p>
+        <a href="#newsletter" class="btn btn-ghost"
+          style="border-color:rgba(22,38,42,0.3); color:var(--ink); display:inline-block; margin-top:10px;">En
+          savoir plus</a>
+      </div>
+      <div class="story-visual">
+        <div class="story-arch"> <img src="./image/photo.png" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter">
+    <div class="section-head" style="margin-bottom:0;">
+      <div class="section-eyebrow">Restons en contact</div>
+      <h2 class="section-title">Recevez nos nouvelles pièces en avant-première</h2>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Votre adresse email" aria-label="Adresse email">
+        <button class="btn btn-primary" id="newsletterBtn">S'inscrire</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px;">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <g transform="translate(20,20)" stroke="currentColor" stroke-width="1.1">
+              <circle r="16" />
+              <circle r="2" />
+              <g id="fLogoPetal">
+                <path d="M0,-14 C1.8,-9.5 1.8,-4.5 0,-2 C-1.8,-4.5 -1.8,-9.5 0,-14 Z" fill="none" />
+              </g>
+              <use href="#fLogoPetal" transform="rotate(30)" />
+              <use href="#fLogoPetal" transform="rotate(60)" />
+              <use href="#fLogoPetal" transform="rotate(90)" />
+              <use href="#fLogoPetal" transform="rotate(120)" />
+              <use href="#fLogoPetal" transform="rotate(150)" />
+              <use href="#fLogoPetal" transform="rotate(180)" />
+              <use href="#fLogoPetal" transform="rotate(210)" />
+              <use href="#fLogoPetal" transform="rotate(240)" />
+              <use href="#fLogoPetal" transform="rotate(270)" />
+              <use href="#fLogoPetal" transform="rotate(300)" />
+              <use href="#fLogoPetal" transform="rotate(330)" />
+            </g>
+          </svg>
+          <span class="logo-text">Andalousia</span>
+        </div>
+        <p style="font-size:0.85rem; opacity:0.75; max-width:280px;">Artisanat et terroir marocain, sélectionnés
+          avec soin auprès de coopératives et d'artisans partenaires.</p>
+      </div>
+      <div>
+        <h4>Boutique</h4>
+        <a href="#products">Terroir &amp; épicerie</a>
+        <a href="#products">Artisanat &amp; décoration</a>
+        <a href="#products">Mode &amp; maroquinerie</a>
+      </div>
+      <div>
+        <h4>Maison</h4>
+        <a href="#story">Notre histoire</a>
+        <a href="#">Nos artisans</a>
+        <a href="#">Livraison</a>
+      </div>
+      <div>
+        <h4>Aide</h4>
+        <a href="#">Contact</a>
+        <a href="#">Retours</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Andalousia. Tous droits réservés.</span>
+      <span>Casablanca · Fès · Séville</span>
+    </div>
+  </footer>
+
+  <!-- ==================== OVERLAY ==================== -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ==================== TIROIR PANIER ==================== -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Votre panier</h3>
+      <button class="cart-close" id="cartCloseBtn">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row"><span>Total</span><span id="cartTotal">0 MAD</span></div>
+      <button class="btn btn-primary" id="checkoutBtn">Passer commande</button>
+    </div>
+  </div>
+
+  <!-- ==================== TIROIR FAVORIS ==================== -->
+  <div class="cart-drawer" id="favoritesDrawer">
+    <div class="cart-header">
+      <h3>Vos favoris</h3>
+      <button class="cart-close" id="favoritesCloseBtn">&times;</button>
+    </div>
+    <div class="cart-items" id="favoritesItems"></div>
+  </div>
+
+  <!-- ==================== MODALE PRODUIT ==================== -->
+  <div class="product-modal" id="productModal">
+    <div class="product-modal-panel">
+      <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+      <div id="productModalContent"></div>
+    </div>
+  </div>
+
+  <!-- ==================== TOASTS ==================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="/script.js"></script>
 
 </body>
+
 </html>
